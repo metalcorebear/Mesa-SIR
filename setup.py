@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="mesa_SIR",  # Replace with your own username
-    version="0.0.1",
+    version="0.0.2",
     author="Mark Bailey and Tom Pike",
     author_email="mark.mbailey@gmail.com",
     description="A Mesa extension for SIR models",
