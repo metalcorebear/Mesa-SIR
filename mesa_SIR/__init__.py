@@ -4,8 +4,8 @@ Core Objects: Model, and Agent.
 """
 import datetime
 
-from .mesa_SIR import calculations_and_plots
-from .mesa_SIR import SIR
+from mesa_SIR import calculations_and_plots
+from mesa_SIR import SIR
 
 __all__ = ["Infection"]
 

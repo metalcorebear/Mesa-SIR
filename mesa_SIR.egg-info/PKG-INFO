@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: mesa-SIR
-Version: 0.0.1
+Version: 0.0.3
 Summary: A Mesa extension for SIR models
 Home-page: https://github.com/metalcorebear/COVID-Agent-Based-Model
 Author: Mark Bailey and Tom Pike
@@ -12,23 +12,21 @@ Description: # Mesa SIR
         
         A full model version is available [COVID MESA ABM](https://github.com/metalcorebear/COVID-Agent-Based-Model)
         
-        **Please contribute to help make this extension better. Some ways to contribute are: 
-        		* Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)
-        		* Make more complex populations
-        		* Make more complex social dynamics
-        		* Create Mesa MultiGrid option
-        		* Add BatchRunner option
-        ** 
+        ***Please contribute to help make this extension better. Some ways to contribute are:*** 
+        * Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)
+        * Make more complex populations
+        * Make more complex social dynamics
+        * Create Mesa MultiGrid option
+        * Add BatchRunner option
+         
         
         
         ## Requirements
         
         Mesa SIR requires
         
-            numpy
-            matplotlib
             Mesa>=0.8.6
-            numpy==1.16.5
+            numpy>=1.16.5
         	networkx >=2.3
         	matplotlib>=3.1.1
         
@@ -37,7 +35,7 @@ Description: # Mesa SIR
         
             pip install mesa_SIR
         
-            pip install git+git...
+            pip install git+https://github.com/metalcorebear/Mesa-SIR.git
         
         
         Currently, Mesa SIR has two modules. 
@@ -46,7 +44,7 @@ Description: # Mesa SIR
         
         The main module is the SIR.py module. The SIR modules has two main parts. 
         
-        # Build Network method 
+        ### Build Network method 
         
         The build network class has two parameters:
         
@@ -61,21 +59,21 @@ Description: # Mesa SIR
         	G = SIR.build_network(interactions, population)
             self.grid = NetworkGrid(G)
         
-        # Infection Class
+        ### Infection Class
         
         The infection class has two main part interactions and infection.
         
-        	The infection class has the following key word arguments (kwargs):
+        The infection class has the following key word arguments (kwargs):
         
-        	ptrans = 0.25 #probability of transmission; float between 0 and 1 
-        	reinfection_rate = 0.00 #probability of reinfection; float between 0 and 1
-        	I0 =0.10 # initial infection rate; float between 0 and 1
-        	severe =0.18 # probability of severity; float between 0 and 1
-        	progression_period = 3 #number of days for disease to progress and show symptoms-- mean of a Gaussian distribution
-        	progression_sd = 2 #standard deviation of disease progression -- sd of a Gaussian distribution 
-        	death_rate = 0.0193 #probability of disease being fatal
-        	recovery_days = 21 #number of days for disease to complete -- mean of Gaussian distribution
-            recovery_sd = 7 #standard deviation of disease to finish -- sd of Gaussian distribution
+        - ptrans = 0.25 #probability of transmission; float between 0 and 1 
+        - reinfection_rate = 0.00 #probability of reinfection; float between 0 and 1
+        - I0 =0.10 # initial infection rate; float between 0 and 1
+        - severe =0.18 # probability of severity; float between 0 and 1
+        - progression_period = 3 #number of days for disease to progress and show symptoms-- mean of a Gaussian distribution
+        - progression_sd = 2 #standard deviation of disease progression -- sd of a Gaussian distribution 
+        - death_rate = 0.0193 #probability of disease being fatal
+        - recovery_days = 21 #number of days for disease to complete -- mean of Gaussian distribution
+        - recovery_sd = 7 #standard deviation of disease to finish -- sd of Gaussian distribution
         
         
         The infection class can be instantiated as follows in the model initiation: 
@@ -97,8 +95,9 @@ Description: # Mesa SIR
             def __init__(self, unique_id, model):
                 super().__init__(unique_id, model)
                 self.pos = unique_id
-                self.infected, self.susceptible, self.severe = self.model.SIR_instance.initial_infection() # Infection class initial infection method
+                # Infection class initial infection method
                 self.was_infected = False
+                self.infected, self.susceptible, self.severe = self.model.SIR_instance.initial_infection() 
                 self.recovered = False
                 self.alive = True
                 self.day = 0
@@ -113,7 +112,7 @@ Description: # Mesa SIR
                 	self.day += 1
         
         
-        # Calculations and Plots Module
+        ## Calculations and Plots Module
         
         This module conducts several computations and produces plots and data for the model. 
         
