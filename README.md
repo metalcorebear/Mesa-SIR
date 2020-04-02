@@ -5,11 +5,11 @@ Mesa SIR is an extension for Python's Agent Based Modeling Library Mesa. Mesa SI
 A full model version is available [COVID MESA ABM](https://github.com/metalcorebear/COVID-Agent-Based-Model)
 
 ***Please contribute to help make this extension better. Some ways to contribute are: 
-		- Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)
-		- Make more complex populations
-		- Make more complex social dynamics
-		- Create Mesa MultiGrid option
-		- Add BatchRunner option***
+		-- Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)
+		-- Make more complex populations
+		-- Make more complex social dynamics
+		-- Create Mesa MultiGrid option
+		-- Add BatchRunner option***
  
 
 
@@ -53,7 +53,7 @@ Using Mesa's NetworkGrid class this module builds a network of agents and their 
 	G = SIR.build_network(interactions, population)
     self.grid = NetworkGrid(G)
 
-#### Infection Class
+### Infection Class
 
 The infection class has two main part interactions and infection.
 
@@ -89,8 +89,9 @@ Due to the requirements of the infection model an agent needs several attributes
     def __init__(self, unique_id, model):
         super().__init__(unique_id, model)
         self.pos = unique_id
-        self.infected, self.susceptible, self.severe = self.model.SIR_instance.initial_infection() # Infection class initial infection method
+        # Infection class initial infection method
         self.was_infected = False
+        self.infected, self.susceptible, self.severe = self.model.SIR_instance.initial_infection() 
         self.recovered = False
         self.alive = True
         self.day = 0
