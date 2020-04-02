@@ -55,17 +55,17 @@ Using Mesa's NetworkGrid class this module builds a network of agents and their 
 
 The infection class has two main part interactions and infection.
 
-	The infection class has the following key word arguments (kwargs):
+The infection class has the following key word arguments (kwargs):
 
-	ptrans = 0.25 #probability of transmission; float between 0 and 1 
-	reinfection_rate = 0.00 #probability of reinfection; float between 0 and 1
-	I0 =0.10 # initial infection rate; float between 0 and 1
-	severe =0.18 # probability of severity; float between 0 and 1
-	progression_period = 3 #number of days for disease to progress and show symptoms-- mean of a Gaussian distribution
-	progression_sd = 2 #standard deviation of disease progression -- sd of a Gaussian distribution 
-	death_rate = 0.0193 #probability of disease being fatal
-	recovery_days = 21 #number of days for disease to complete -- mean of Gaussian distribution
-    recovery_sd = 7 #standard deviation of disease to finish -- sd of Gaussian distribution
+- ptrans = 0.25 #probability of transmission; float between 0 and 1 
+- reinfection_rate = 0.00 #probability of reinfection; float between 0 and 1
+- I0 =0.10 # initial infection rate; float between 0 and 1
+- severe =0.18 # probability of severity; float between 0 and 1
+- progression_period = 3 #number of days for disease to progress and show symptoms-- mean of a Gaussian distribution
+- progression_sd = 2 #standard deviation of disease progression -- sd of a Gaussian distribution 
+- death_rate = 0.0193 #probability of disease being fatal
+- recovery_days = 21 #number of days for disease to complete -- mean of Gaussian distribution
+- recovery_sd = 7 #standard deviation of disease to finish -- sd of Gaussian distribution
 
 
 The infection class can be instantiated as follows in the model initiation: 
