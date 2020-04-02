@@ -1,0 +1,9 @@
+README.md
+setup.py
+mesa_SIR/SIR.py
+mesa_SIR/__init__.py
+mesa_SIR/calculations_and_plots.py
+mesa_SIR.egg-info/PKG-INFO
+mesa_SIR.egg-info/SOURCES.txt
+mesa_SIR.egg-info/dependency_links.txt
+mesa_SIR.egg-info/top_level.txt
