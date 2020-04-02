@@ -1,12 +1,6 @@
 Metadata-Version: 2.1
 Name: mesa-SIR
-<<<<<<< HEAD
 Version: 0.0.3
-||||||| merged common ancestors
-Version: 0.0.1
-=======
-Version: 0.0.2
->>>>>>> 0375d55cf192c74cf3a5e4e2dfd21374b0d7206d
 Summary: A Mesa extension for SIR models
 Home-page: https://github.com/metalcorebear/COVID-Agent-Based-Model
 Author: Mark Bailey and Tom Pike
