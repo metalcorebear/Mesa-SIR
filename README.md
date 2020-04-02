@@ -25,7 +25,7 @@ Mesa SIR requires
 
 ## Installation 
 
-    pip install mesa_SIR
+    pip install mesa-SIR
 
     pip install git+https://github.com/metalcorebear/Mesa-SIR.git
 
