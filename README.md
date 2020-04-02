@@ -4,12 +4,12 @@ Mesa SIR is an extension for Python's Agent Based Modeling Library Mesa. Mesa SI
 
 A full model version is available [COVID MESA ABM](https://github.com/metalcorebear/COVID-Agent-Based-Model)
 
-***Please contribute to help make this extension better. Some ways to contribute are: 
-		-- Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)
-		-- Make more complex populations
-		-- Make more complex social dynamics
-		-- Create Mesa MultiGrid option
-		-- Add BatchRunner option***
+***Please contribute to help make this extension better. Some ways to contribute are:*** 
+		- **Add the ability to bring in GIS extensions with [Mesa Geo](https://github.com/Corvince/mesa-geo)**
+		- **Make more complex populations**
+		- **Make more complex social dynamics**
+		- **Create Mesa MultiGrid option**
+		- **Add BatchRunner option**
  
 
 
@@ -17,10 +17,8 @@ A full model version is available [COVID MESA ABM](https://github.com/metalcoreb
 
 Mesa SIR requires
 
-    numpy
-    matplotlib
     Mesa>=0.8.6
-    numpy==1.16.5
+    numpy>=1.16.5
 	networkx >=2.3
 	matplotlib>=3.1.1
 
